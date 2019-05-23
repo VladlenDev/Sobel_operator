@@ -24,9 +24,7 @@ void change_ppm_matrix(ppm_file *img, pixel *new_matrix);
 void write_ppm_file(ppm_file *img);
 void clear_file_info(ppm_file *img);
 
-void find_gradx(ppm_file *img, pixel *gradx);
-void find_grady(ppm_file *img, pixel *grady);
-void apply_gradx(ppm_file *img);
-void apply_grady(ppm_file *img);
-void calculate_sobel(pixel *gradx, pixel *grady, pixel *sobel, int size);
-void apply_sobel(ppm_file *img);
+void *find_gradx(void *args);
+void *find_grady(void *args);
+void *calculate_sobel(void *args);
+void apply_sobel(ppm_file *img, int n);
